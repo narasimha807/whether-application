@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Quality Checker</title>
+    <style>
+        body {
+            background-image: url(https://img.freepik.com/free-photo/sunny-landscape-with-windmills_1112-78.jpg?w=996&t=st=1704181607~exp=1704182207~hmac=1c80c804331139c1d9b0fad29597daddc260721fc39e782dbfc863e7cf762bbe);
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #87CEEB; /* Sky Blue */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        /*.Backgroundimg{
+            background-image: url(https://img.freepik.com/free-photo/sunny-landscape-with-windmills_1112-78.jpg?w=996&t=st=1704181607~exp=1704182207~hmac=1c80c804331139c1d9b0fad29597daddc260721fc39e782dbfc863e7cf762bbe);
+            background-size: cover;
+            height: 100vh;
+        }*/
+
+        h1 {
+            text-align: center;
+            color: #fff; /* White */
+            margin-bottom: 20px;
+        }
+
+        #input-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color:rgb(84, 87, 89); /* White */
+            font-size: 18px;
+
+        }
+
+        input {
+            padding: 10px;
+            margin-bottom: 15px;
+            width: 200px;
+            border: 1px solid #fff; /* White */
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 12px 20px;
+            background-color: #4CAF50; /* Green */
+            color: #fff; /* White */
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+        .info {
+            background-image: url(https://img.freepik.com/free-photo/big-chimneys-with-smoke_268835-3404.jpg?w=360&t=st=1704182035~exp=1704182635~hmac=a67a302122b1aac2f6c8cbd91d7e1a811a4a3112fbde3343da8b23173f4e4e4a);
+            background-size: cover;
+            text-align: center;
+             /*background-color: #fff; White */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft Box Shadow */
+            margin-top: 20px;
+            display: none;
+            flex-direction: column;
+        }
+
+        .info-title {
+            color: #333; /* Dark Gray */
+            margin-bottom: 20px;
+        }
+
+        .info-data {
+            margin: 8px 0;
+            color:rgb(73, 68, 68); /* Medium Gray */
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+
+    <h1>Air Quality Checker</h1>
+
+    <div id="input-container">
+        <form id="form">
+            <label for="latitude">Latitude:</label>
+            <input type="text" id="latitude" placeholder="Enter Latitude">
+
+            <label for="longitude">Longitude:</label>
+            <input type="text" id="longitude" placeholder="Enter Longitude">
+            <br>
+
+            <button type="submit">Check Air Quality</button>
+        </form>
+        <div class="info" id="result">
+            <h1 class="info-title">AIR QUALITY</h1>
+            <p class="info-data">AQI: <span id="aqi"></span></p>
+            <p class="info-data">CO: <span id="co"></span></p>
+            <p class="info-data">NO2: <span id="no2"></span></p>
+            <p class="info-data">O3: <span id="o3"></span></p>
+            <p class="info-data">PM2.5: <span id="pm2"></span></p>
+            <p class="info-data">PM10: <span id="pm10"></span></p>
+            <p class="info-data">SO2: <span id="so2"></span></p>
+        </div>
+        </div>
+    </div>
+
+
+    <script src="index.js">
+</script>
+
+</body>
+</html>
